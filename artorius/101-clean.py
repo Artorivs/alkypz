@@ -73,4 +73,8 @@ df_vacc_us = sentiment_analysis(df_vacc_us, 'text')
 
 df_tweets = pd.concat([df_vacc_id, df_vacc_in, df_vacc_us], ignore_index=True)
 
+## compute the polarity and subjectivity of each tweet
+df_tweets['polarity'] = df_tweets['text'].apply(lambda x: TextBlob(x).sentiment.polarity)
+df_tweets['subjectivity'] = df_tweets['text'].apply(lambda x: TextBlob(x).sentiment.subjectivity)
+
 df_tweets.to_csv(os.path.join(path_data, 'tweets.csv'), index=False)

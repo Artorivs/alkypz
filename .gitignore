@@ -133,6 +133,5 @@ dmypy.json
 
 # original data
 data/
-# data-tweet/
 artorius/100-clean.ipynb
 *.csv
