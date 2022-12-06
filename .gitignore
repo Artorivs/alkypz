@@ -133,5 +133,4 @@ dmypy.json
 
 # original data
 data/
-artorius/100-clean.ipynb
 *.csv
